@@ -1,5 +1,5 @@
 CREATE TABLE Agenda (
-    IdAgenda INT PRIMARY KEY AUTO_INCREMENT,
+    IdAgenda SERIAL PRIMARY KEY,
     DiaSemana VARCHAR(20) NOT NULL,
     HoraInicio TIME NOT NULL,
     HoraFim TIME NOT NULL,
@@ -13,20 +13,37 @@ CREATE TABLE Medic (
     Percentual DECIMAL(5, 2) NOT NULL
 );
 
-CREATE TABLE ExerceEsp (
-    CRM VARCHAR(50),
-    IdEsp INT,
-    FOREIGN KEY (CRM) REFERENCES Medic(CRM)
+CREATE TABLE Doenca (
+    IdDoenca SERIAL PRIMARY KEY, 
+    NomeDoenca VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE Paciente (
+    IdPac SERIAL PRIMARY KEY,
+    CPF VARCHAR(11) UNIQUE NOT NULL,
+    NomeP VARCHAR(100) NOT NULL,
+    TelefonePac VARCHAR(20) NOT NULL,
+    Endereco VARCHAR(255),
+    Idade INT,
+    Sexo CHAR(1)
 );
 
 CREATE TABLE Especialidade (
-    IdEsp INT PRIMARY KEY AUTO_INCREMENT,
+    IdEsp SERIAL PRIMARY KEY,
     NomeEsp VARCHAR(100) NOT NULL,
     Indice INT
 );
 
+CREATE TABLE ExerceEsp (
+    CRM VARCHAR(50),
+    IdEsp INT,
+    PRIMARY KEY (CRM, IdEsp),
+    FOREIGN KEY (CRM) REFERENCES Medic(CRM),
+    FOREIGN KEY (IdEsp) REFERENCES Especialidade(IdEsp)
+);
+
 CREATE TABLE Consulta (
-    IdCon INT PRIMARY KEY AUTO_INCREMENT,
+    IdCon SERIAL PRIMARY KEY,
     CRM VARCHAR(50),
     IdEsp INT,
     IdPac INT,
@@ -38,33 +55,18 @@ CREATE TABLE Consulta (
     FormaPagamento VARCHAR(50),
     FOREIGN KEY (CRM) REFERENCES Medic(CRM),
     FOREIGN KEY (IdEsp) REFERENCES Especialidade(IdEsp),
-    FOREIGN KEY (IdPac) REFERENCES Paciente(IdPac),
-    FOREIGN KEY (Data) REFERENCES Calendario(Data)
-);
+    FOREIGN KEY (IdPac) REFERENCES Paciente(IdPac)
+	);
 
 CREATE TABLE Diagnostica (
-    IdDiagnostica INT PRIMARY KEY AUTO_INCREMENT,
+    IdDiagnostica SERIAL PRIMARY KEY,
     IdDoenca INT,
     FOREIGN KEY (IdDoenca) REFERENCES Doenca(IdDoenca)
 );
 
-CREATE TABLE Doenca (
-    IdDoenca INT PRIMARY KEY AUTO_INCREMENT,
-    NomeDoenca VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE Paciente (
-    IdPac INT PRIMARY KEY AUTO_INCREMENT,
-    CPF VARCHAR(11) UNIQUE NOT NULL,
-    NomeP VARCHAR(100) NOT NULL,
-    TelefonePac VARCHAR(20) NOT NULL,
-    Endereco VARCHAR(255),
-    Idade INT,
-    Sexo CHAR(1)
-);
 
 CREATE TABLE Diagnostico (
-    IdDiagnostico INT PRIMARY KEY AUTO_INCREMENT,
+    IdDiagnostico SERIAL PRIMARY KEY,
     TratamentoRecomendado TEXT,
     RemediosReceitados TEXT,
     Observacoes TEXT,
