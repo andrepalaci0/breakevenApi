@@ -4,7 +4,8 @@ INSERT INTO Especialidade (NomeEsp, Indice) VALUES
 ('Cardiologia', 3),
 ('Dermatologia', 4),
 ('Oncologia', 5),
-('Pediatria', 6);
+('Pediatria', 6),
+('Dermatologia', 7);
 
 INSERT INTO Medic (CRM, NomeM, TelefoneM, Percentual) VALUES
 ('CRM001', 'Dr. João Silva', '123-456-7890', 70.0),
@@ -38,9 +39,20 @@ INSERT INTO ExerceEsp (CRM, IdEsp) VALUES
 ('CRM002', 2),  -- Dra. Ana Souza - Neurologia
 ('CRM003', 3),  -- Dr. House - Cardiologia (assigned here)
 ('CRM004', 4),  -- Dra. Emily Johnson - Dermatologia
+('CRM004', 7),
+('CRM001', 7),
 ('CRM005', 5),
 ('CRM006', 4),  -- Dermatology
 ('CRM006', 6);
+
+INSERT INTO Consulta (CRM, IdEsp, IdPac, Data, HoraInicCon)
+VALUES ('CRM003', -- Dr. House's CRM (assuming you assigned it earlier)
+        3,        -- Assuming 'IdEsp' is 3 for Cardiology (modify if different)
+        -- Find Diego Pituca's IdPac (replace with actual ID if known)
+        (SELECT IdPac FROM Paciente WHERE NomeP = 'Diego Pituca'),
+        '2024-05-06', -- Date of consultation
+        '10:00:00'); -- Time of consultation (modify if needed)
+
 
  
 

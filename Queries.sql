@@ -38,12 +38,14 @@ SELECT DISTINCT M.NomeM
 FROM Medic M
 JOIN Consulta C ON M.CRM = C.CRM
 GROUP BY M.NomeM
-HAVING COUNT(DISTINCT DAYOFWEEK(C.Data)) = 7;
+HAVING COUNT(DISTINCT EXTRACT(DOW FROM C.Data)) = 7 AND COUNT(*) >= 7;
+
 
 --Listar as consultas (IdMedico, IdPaciente, IdEspecial, Data, HoraInicCon) feitas no mês de janeiro de 2024.
 SELECT C.CRM AS IdMedico, C.IdPac AS IdPaciente, C.IdEsp AS IdEspecialidade, C.Data, C.HoraInicCon
 FROM Consulta C
-WHERE MONTH(C.Data) = 1 AND YEAR(C.Data) = 2024;
+WHERE EXTRACT(MONTH FROM C.Data) = 1 AND EXTRACT(YEAR FROM C.Data) = 2024;
+
 
 --Qual é a quantidade total de consultas feitas pelo “Dr. House” por especialidade?
 SELECT E.NomeEsp AS Especialidade, COUNT(*) AS QuantidadeTotalConsultas
