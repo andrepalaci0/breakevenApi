@@ -24,29 +24,29 @@ CREATE TABLE Paciente (
     NomeP VARCHAR(100) NOT NULL,
     TelefonePac VARCHAR(20) NOT NULL,
     Endereco VARCHAR(255),
-    Idade INT,
+    Idade BIGINT,
     Sexo CHAR(1)
 );
 
 CREATE TABLE Especialidade (
     IdEsp SERIAL PRIMARY KEY,
     NomeEsp VARCHAR(100) NOT NULL,
-    Indice INT
+    Indice BIGINT UNIQUE
 );
 
 CREATE TABLE ExerceEsp (
     CRM VARCHAR(50),
-    IdEsp INT,
+    IdEsp BIGINT,
     PRIMARY KEY (CRM, IdEsp),
     FOREIGN KEY (CRM) REFERENCES Medic(CRM),
-    FOREIGN KEY (IdEsp) REFERENCES Especialidade(IdEsp)
+    FOREIGN KEY (IdEsp) REFERENCES Especialidade(Indice)
 );
 
 CREATE TABLE Consulta (
     IdCon SERIAL PRIMARY KEY,
     CRM VARCHAR(50),
-    IdEsp INT,
-    IdPac INT,
+    IdEsp BIGINT,
+    IdPac BIGINT,
     Data DATE,
     HoraInicCon TIME,
     HoraFimCon TIME,
@@ -54,13 +54,13 @@ CREATE TABLE Consulta (
     ValorPago DECIMAL(10, 2),
     FormaPagamento VARCHAR(50),
     FOREIGN KEY (CRM) REFERENCES Medic(CRM),
-    FOREIGN KEY (IdEsp) REFERENCES Especialidade(IdEsp),
+    FOREIGN KEY (IdEsp) REFERENCES Especialidade(Indice),
     FOREIGN KEY (IdPac) REFERENCES Paciente(IdPac)
 	);
 
 CREATE TABLE Diagnostica (
     IdDiagnostica SERIAL PRIMARY KEY,
-    IdDoenca INT,
+    IdDoenca BIGINT,
     FOREIGN KEY (IdDoenca) REFERENCES Doenca(IdDoenca)
 );
 
@@ -70,7 +70,7 @@ CREATE TABLE Diagnostico (
     TratamentoRecomendado TEXT,
     RemediosReceitados TEXT,
     Observacoes TEXT,
-    IdCon INT,
+    IdCon BIGINT,
     FOREIGN KEY (IdDiagnostico) REFERENCES Diagnostica(IdDiagnostica),
     FOREIGN KEY (IdCon) REFERENCES Consulta(IdCon)
 );

@@ -13,7 +13,8 @@ INSERT INTO Especialidade (NomeEsp, Indice) VALUES
 ('Neurologia', 2),
 ('Cardiologia', 3),
 ('Dermatologia', 4),
-('Oncologia', 5);
+('Oncologia', 5),
+('Pediatria', 1); 
 
 
 -- Inserir dados na tabela ExerceEsp
