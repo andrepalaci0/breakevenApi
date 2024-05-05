@@ -34,11 +34,13 @@ WHERE M.NomeM = 'Dr. House'
 AND E.NomeEsp = 'Cardiologia';
 
 --Listar o nome dos médicos que atendem consultas todos os dias da semana.
-SELECT DISTINCT M.NomeM
+SELECT M.NomeM
 FROM Medic M
-JOIN Consulta C ON M.CRM = C.CRM
-GROUP BY M.NomeM
-HAVING COUNT(DISTINCT EXTRACT(DOW FROM C.Data)) = 7 AND COUNT(*) >= 7;
+JOIN Agenda A ON M.CRM = A.CRM
+WHERE A.DiaSemana IN ('Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira') --Consideramos apenas os dias úteis
+GROUP BY M.CRM, M.NomeM
+HAVING COUNT(DISTINCT A.DiaSemana) = 5;
+
 
 
 --Listar as consultas (IdMedico, IdPaciente, IdEspecial, Data, HoraInicCon) feitas no mês de janeiro de 2024.
@@ -61,7 +63,7 @@ SELECT M.CRM, M.NomeM
 FROM Medic M
 LEFT JOIN Consulta C ON M.CRM = C.CRM
 GROUP BY M.CRM, M.NomeM
-ORDER BY COUNT(C.IdCon) ASC;
+ORDER BY COUNT(C.IdCon) ASC; -- Ou seja, fizemos uma ordem crescente dos médicos por numero de consultas.
 
 --Remover todos as consultas não pagas.
 DELETE FROM Consulta
