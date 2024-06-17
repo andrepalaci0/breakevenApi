@@ -8,6 +8,8 @@ namespace breakevenApi.Domain.Entities.Diagnostica
     [PrimaryKey(nameof(IdDiagnostico), nameof(IdDoenca))]
     public class Diagnostica
     {
+        
+
         [Required]
         [ForeignKey(nameof(IdDiagnostico))]
         public long IdDiagnostico { get; private set; }
@@ -15,5 +17,12 @@ namespace breakevenApi.Domain.Entities.Diagnostica
         [Required]
         [ForeignKey(nameof(IdDoenca))]
         public long IdDoenca { get; private set; }
+
+        public Diagnostica(long idDiagnostico, long idDoenca)
+        {
+            IdDiagnostico = idDiagnostico;
+            IdDoenca = idDoenca;
+        }
+
     }
 }

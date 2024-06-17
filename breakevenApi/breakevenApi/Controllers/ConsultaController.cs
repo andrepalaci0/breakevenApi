@@ -101,7 +101,7 @@ namespace breakevenApi.Controllers
         {
             if (createConsultaDTO.NomeMedicoPreferencia.IsNullOrEmpty())
             {
-                var possibleMedics = _consultaService.GetMedicsByEspecialidade(createConsultaDTO.Especialidade);
+                var possibleMedics = _consultaService.GetMedicsByEspecialidade(createConsultaDTO.CodigoEspecialidade);
                 return BadRequest("É necessário definir o médico que realizará a consulta. Escolha os médicos disponíveis na lista: " + possibleMedics);
             }
 

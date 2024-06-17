@@ -1,5 +1,7 @@
 ﻿
+using breakevenApi.Domain.Entities.ExerceEsp;
 using breakevenApi.Domain.Entities.Medic;
+using breakevenApi.Domain.Services.DTOs.Medic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace breakevenApi.Controllers
@@ -8,24 +10,42 @@ namespace breakevenApi.Controllers
     public class MedicController : Controller
     {
         private readonly IMedicRepository _medicRepository;
+        private readonly IExerceEspRepository _exerceEspRepository;
 
-        public MedicController(IMedicRepository medicRepository)
+
+        public MedicController(IMedicRepository medicRepository, IExerceEspRepository exerceEspRepository)
         {
             _medicRepository = medicRepository;
+            _exerceEspRepository = exerceEspRepository;
         }
 
         [HttpGet]
         [Route("/get/{id}")]
         public IActionResult getMedicById(long id)
         {
-            // Call the appropriate method from _queries to get medic by id
             var medic = _medicRepository.GetByCrm(id);
             if (medic == null )
             {
-                return NotFound(); // Return 404 Not Found if medic is not found
+                return NotFound(); 
             }
 
-            return Ok(medic); // Return 200 OK with the medic data
+            return Ok(medic); 
+        }
+
+        [HttpPut]
+        public IActionResult CreateMedic([FromBody] CreateMedicDTO createMedicDTO)
+        {
+            var medic = new Medic(createMedicDTO.Crm, createMedicDTO.Percentual, createMedicDTO.Telefone, createMedicDTO.NomeMedico); 
+            try
+            {
+                _medicRepository.Create(medic);
+                _exerceEspRepository.Create(new ExerceEsp(medic.Crm, createMedicDTO.CodigoEspecialidade));
+                return Ok();
+            }
+            catch (Exception e)
+            {
+                return BadRequest();
+            }
         }
     }
 }

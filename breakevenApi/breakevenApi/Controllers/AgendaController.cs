@@ -18,10 +18,10 @@ namespace breakevenApi.Controllers
         }
 
         [HttpGet]
-        [Route("/{id}")]
-        public IActionResult GetById(long id)
+        [Route("/get-agenda/{idAgenda}")]
+        public IActionResult GetById(long idAgenda)
         {
-            var agenda = _agendaRepository.GetById(id);
+            var agenda = _agendaRepository.GetById(idAgenda);
             if (agenda == null)
             {
                 return NotFound();

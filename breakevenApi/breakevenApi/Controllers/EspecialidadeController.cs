@@ -17,10 +17,10 @@ namespace breakevenApi.Controllers
 
 
         [HttpGet]
-        [Route("/{id}")]
-        public IActionResult GetEspecialidadeById(long id)
+        [Route("/get/{idEspecialidade}")]
+        public IActionResult GetEspecialidadeById(long idEspecialidade)
         {
-            return Ok(_especialidadeRepository.GetByCodigo(id));
+            return Ok(_especialidadeRepository.GetByCodigo(idEspecialidade));
         }
 
         [HttpPut]

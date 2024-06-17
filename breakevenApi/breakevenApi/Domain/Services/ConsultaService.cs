@@ -1,4 +1,5 @@
 ﻿using breakevenApi.Domain.Entities.Consulta;
+using breakevenApi.Domain.Entities.Diagnostica;
 using breakevenApi.Domain.Entities.Diagnostico;
 using breakevenApi.Domain.Entities.Enums;
 using breakevenApi.Domain.Entities.Especialidade;
@@ -17,6 +18,7 @@ namespace breakevenApi.Domain.Services
         private readonly IConsultaRepository _consultaRepository;
         private readonly IMedicRepository _medicoRepository;
         private readonly IDiagnosticoRepository _diagnosticoRepository;
+        private readonly IDiagnosticaRepository _diagnosticaRepository;
         private readonly IHistoricoPacienteRepository _historicoPacienteRepository;
         private readonly IPacienteRepository _pacienteRepository;
         private readonly IEspecialidadeRepository _especialidadeRepository;
@@ -26,6 +28,7 @@ namespace breakevenApi.Domain.Services
         public ConsultaService(IConsultaRepository consultaRepository,
             IMedicRepository medicRepository,
             IDiagnosticoRepository diagnosticoRepository,
+            IDiagnosticaRepository diagnosticaRepository,
             IHistoricoPacienteRepository historicoPacienteRepository,
             IPacienteRepository pacienteRepository,
             IEspecialidadeRepository especialidadeRepository,
@@ -39,6 +42,7 @@ namespace breakevenApi.Domain.Services
             _pacienteRepository = pacienteRepository;
             _especialidadeRepository = especialidadeRepository;
             _exerceEspRepository = exerceEspRepository;
+            _diagnosticaRepository = diagnosticaRepository;
             _logger = logger;
         }
 
@@ -91,6 +95,7 @@ namespace breakevenApi.Domain.Services
             try{
                 _diagnosticoRepository.Create(newDiagnostico);
                 _consultaRepository.Update(consulta);
+                _diagnosticaRepository.Create(new Diagnostica(newDiagnostico.DiagnosticoId, finishesConsultaDTO.IdPaciente));
             }
             catch (Exception e){
                 _logger.LogError(e.Message);
@@ -122,6 +127,11 @@ namespace breakevenApi.Domain.Services
         public List<Medic>? GetMedicsByEspecialidade(string especialidade)
         {
             return _medicoRepository.GetByEspecialidade(especialidade);
+        }
+
+        public List<Medic>? GetMedicsByEspecialidade(long IdEspecialidae)
+        {
+            return _medicoRepository.GetByEspecialidade(IdEspecialidae);
         }
 
         public List<RelatorioCronogramaConsultaDTO> GetDayCronogram(DateOnly day)
