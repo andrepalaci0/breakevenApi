@@ -1,12 +1,15 @@
-#See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
+# See https://aka.ms/customizecontainer to learn how to customize your debug container and how Visual Studio uses this Dockerfile to build your images for faster debugging.
 
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+ARG DOTNET_RUNTIME=mcr.microsoft.com/dotnet/aspnet:8.0
+ARG DOTNET_SDK=mcr.microsoft.com/dotnet/sdk:8.0
+
+FROM ${DOTNET_RUNTIME} AS base
 USER app
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM ${DOTNET_SDK} AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["breakevenApi/breakevenApi.csproj", "breakevenApi/"]
@@ -22,4 +25,8 @@ RUN dotnet publish "./breakevenApi.csproj" -c $BUILD_CONFIGURATION -o /app/publi
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "breakevenApi.dll"]
+
+# Run Entity Framework migrations
+RUN dotnet tool install --version 5.0 --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+ENTRYPOINT ["dotnet", "ef", "database", "update", "--project", "breakevenApi", "--startup-project", "breakevenApi"]

@@ -1,0 +1,15 @@
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
+
+namespace breakevenApi.Domain.Entities.Medic
+{
+    public interface IMedicRepository
+    {
+        Task Create(Medic medic);
+        Medic? GetByCrm(long crm);
+        Medic? GetByName(string name);
+        List<Medic>? GetAll();
+        void Update(Medic medic);
+        void Delete(long crm);
+    }
+}

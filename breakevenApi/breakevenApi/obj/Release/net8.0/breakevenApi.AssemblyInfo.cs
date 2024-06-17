@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("834fb04b-8e7c-44ee-bac6-12c46e878a36")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("breakevenApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+79fdb38abcaa7afbe4ec3f97aea1f0db1fdb48f3")]
 [assembly: System.Reflection.AssemblyProductAttribute("breakevenApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("breakevenApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

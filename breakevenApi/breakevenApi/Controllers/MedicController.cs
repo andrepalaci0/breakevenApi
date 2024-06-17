@@ -1,4 +1,5 @@
-﻿using breakevenApi.Queries;
+﻿
+using breakevenApi.Domain.Entities.Medic;
 using Microsoft.AspNetCore.Mvc;
 
 namespace breakevenApi.Controllers
@@ -6,11 +7,11 @@ namespace breakevenApi.Controllers
     [Route("/medic")]
     public class MedicController : Controller
     {
-        private readonly MedicQuery _queries;
+        private readonly IMedicRepository _medicRepository;
 
-        public MedicController(MedicQuery queries)
+        public MedicController(IMedicRepository medicRepository)
         {
-            _queries = queries;
+            _medicRepository = medicRepository;
         }
 
         [HttpGet]
@@ -18,8 +19,7 @@ namespace breakevenApi.Controllers
         public IActionResult getMedicById(long id)
         {
             // Call the appropriate method from _queries to get medic by id
-            var medic = _queries.findMedicByCrm(id);
-
+            var medic = _medicRepository.GetByCrm(id);
             if (medic == null )
             {
                 return NotFound(); // Return 404 Not Found if medic is not found

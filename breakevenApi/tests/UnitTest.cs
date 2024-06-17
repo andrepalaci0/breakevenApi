@@ -9,7 +9,7 @@ namespace tests
         public void TestTesteFunction()
         {
             // Arrange
-            Medic medic= new Medic();
+            // Medic medic= new Medic();
 
             // Act
             //string result = medic.teste();
