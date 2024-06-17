@@ -2,11 +2,13 @@
 using breakevenApi.Domain.Entities.Diagnostico;
 using breakevenApi.Domain.Entities.Enums;
 using breakevenApi.Domain.Entities.Especialidade;
+using breakevenApi.Domain.Entities.ExerceEsp;
 using breakevenApi.Domain.Entities.Historico;
 using breakevenApi.Domain.Entities.Medic;
 using breakevenApi.Domain.Entities.Paciente;
 using breakevenApi.Domain.Services.DTOs.Consulta;
 using Microsoft.IdentityModel.Tokens;
+using System.Data;
 
 namespace breakevenApi.Domain.Services
 {
@@ -18,6 +20,7 @@ namespace breakevenApi.Domain.Services
         private readonly IHistoricoPacienteRepository _historicoPacienteRepository;
         private readonly IPacienteRepository _pacienteRepository;
         private readonly IEspecialidadeRepository _especialidadeRepository;
+        private readonly IExerceEspRepository _exerceEspRepository;
         private readonly ILogger<ConsultaService> _logger;
 
         public ConsultaService(IConsultaRepository consultaRepository,
@@ -26,6 +29,7 @@ namespace breakevenApi.Domain.Services
             IHistoricoPacienteRepository historicoPacienteRepository,
             IPacienteRepository pacienteRepository,
             IEspecialidadeRepository especialidadeRepository,
+            IExerceEspRepository exerceEspRepository,
             ILogger<ConsultaService> logger)
         {
             _consultaRepository = consultaRepository;
@@ -34,6 +38,7 @@ namespace breakevenApi.Domain.Services
             _historicoPacienteRepository = historicoPacienteRepository;
             _pacienteRepository = pacienteRepository;
             _especialidadeRepository = especialidadeRepository;
+            _exerceEspRepository = exerceEspRepository;
             _logger = logger;
         }
 
@@ -70,40 +75,53 @@ namespace breakevenApi.Domain.Services
                 diagnostico.TratamentosRecomendados,
                 consulta.GetId()
                 );
+
             consulta.IdDiagnostico = newDiagnostico.DiagnosticoId;
-            if (finishesConsultaDTO.FormaPagamento.IsNullOrEmpty())
+
+            consulta.Paga = false;
+            consulta.FormaPagamento = null;
+            consulta.ValorPagamento = null;
+
+            if (!finishesConsultaDTO.FormaPagamento.IsNullOrEmpty()){
+                consulta.Paga = true;
+                consulta.FormaPagamento = (MetodosPagamento)Enum.Parse(typeof(MetodosPagamento), finishesConsultaDTO.FormaPagamento);
+                consulta.ValorPagamento = finishesConsultaDTO.ValorPagamento;
+            }
+
+            try{
+                _diagnosticoRepository.Create(newDiagnostico);
+                _consultaRepository.Update(consulta);
+            }
+            catch (Exception e){
+                _logger.LogError(e.Message);
+                return false;
+            }
+            AddHistorico(consulta);
+            return true;
+        }
+
+        public bool PrimeiroCadastroPaciente(CreateConsultaDTO createConsultaDTO)
+        {
+            var paciente = _pacienteRepository.GetByCpf(createConsultaDTO.CPFPaciente);
+            if(paciente == null)
             {
-                consulta.Paga = false;
-                consulta.FormaPagamento = null;
-                consulta.ValorPagamento = null;
+                paciente = new Paciente(createConsultaDTO.NomePaciente, createConsultaDTO.TelefonePaciente, createConsultaDTO.CPFPaciente);
                 try
                 {
-                    _diagnosticoRepository.Create(newDiagnostico);
-                    _consultaRepository.Update(consulta);
+                    _pacienteRepository.Create(paciente);
                 }
                 catch (Exception e)
                 {
                     _logger.LogError(e.Message);
                     return false;
                 }
-                AddHistorico(consulta);
-                return true;
-            }
-            consulta.Paga = true;
-            consulta.FormaPagamento = (MetodosPagamento)Enum.Parse(typeof(MetodosPagamento), finishesConsultaDTO.FormaPagamento);
-            consulta.ValorPagamento = finishesConsultaDTO.ValorPagamento;
-            AddHistorico(consulta);
-            try
-            {
-                _diagnosticoRepository.Create(newDiagnostico);
-                _consultaRepository.Update(consulta);
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.Message);
-                return false;
             }
             return true;
+        }
+
+        public List<Medic>? GetMedicsByEspecialidade(string especialidade)
+        {
+            return _medicoRepository.GetByEspecialidade(especialidade);
         }
 
         public List<RelatorioCronogramaConsultaDTO> GetDayCronogram(DateOnly day)
@@ -132,7 +150,7 @@ namespace breakevenApi.Domain.Services
             return todayCronogram;
         }
 
-        public List<Horario> GetHorariosLivres(DateOnly day, long idMedico)
+        public List<HorarioDTO> GetHorariosLivres(DateOnly day, long idMedico)
         {
             var consultas = _consultaRepository.GetByCrmAndDate(idMedico, day);
             var horarios = GenerateHorarios(day);
@@ -178,16 +196,16 @@ namespace breakevenApi.Domain.Services
             return false;
         }
 
-        public List<Horario> GenerateHorarios(DateOnly date)
+        public List<HorarioDTO> GenerateHorarios(DateOnly date)
         {
-            var horarios = new List<Horario>();
+            var horarios = new List<HorarioDTO>();
             var startTime = new DateTime(date.Year, date.Month, date.Day, 8, 0, 0); // Starting at 8:00 
             var endTime = new DateTime(date.Year, date.Month, date.Day, 17, 0, 0); // Ending at 17:00
 
             while (startTime < endTime)
             {
                 var fim = startTime.AddMinutes(30); // 30 minutes
-                horarios.Add(new Horario(startTime, fim, true));
+                horarios.Add(new HorarioDTO(startTime, fim, true));
                 startTime = fim;
             }
 
@@ -197,6 +215,42 @@ namespace breakevenApi.Domain.Services
         private bool IsOverlapping(DateTime consultaStart, DateTime consultaEnd, DateTime slotStart, DateTime slotEnd)
         {
             return consultaStart < slotEnd && consultaEnd > slotStart;
+        }
+
+        public bool CreateConsulta(CreateConsultaDTO createConsultaDTO)
+        {
+            var medic = _medicoRepository.GetByName(createConsultaDTO.NomeMedicoPreferencia);
+            if (!IsTimeSlotAvailable(createConsultaDTO.HoraInicio, createConsultaDTO.HoraFim, medic.Crm))
+            {
+                return false; 
+            }
+            var newConsulta = new Consulta(
+                _especialidadeRepository.GetByCodigo(createConsultaDTO.CodigoEspecialidade).Codigo,
+                _pacienteRepository.GetByCpf(createConsultaDTO.CPFPaciente).CodigoPaciente,
+                medic.Crm,
+                new DateOnly(createConsultaDTO.DataConsulta.Year, createConsultaDTO.DataConsulta.Month, createConsultaDTO.DataConsulta.Day),
+                createConsultaDTO.HoraInicio,
+                createConsultaDTO.HoraFim,
+                false,
+                null,
+                null
+                );
+            _consultaRepository.Create(newConsulta);
+            return true;
+        }
+
+        public bool IsTimeSlotAvailable(DateTime startTime, DateTime endTime, long crm)
+        {
+            DateOnly day = new DateOnly(startTime.Year, startTime.Month, startTime.Day);
+            var dayConsultas = _consultaRepository.GetByCrmAndDate(crm, day);
+            foreach (var consulta in dayConsultas)
+            {
+                if (startTime < consulta.HoraFimConsulta && endTime > consulta.HoraInicioConsulta)
+                {
+                    return false; 
+                }
+            }
+            return true; 
         }
     }
 }

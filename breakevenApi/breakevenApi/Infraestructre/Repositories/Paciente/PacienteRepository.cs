@@ -23,6 +23,10 @@ public class PacienteRepository : IPacienteRepository
         return _context.Pacientes.FirstOrDefault(p => p.CodigoPaciente == codigoPaciente);
     }
 
+    public Paciente GetByCpf(string cpf)
+    {
+        return _context.Pacientes.FirstOrDefault(p => p.Cpf == cpf);
+    }
     public List<Paciente> GetAll()
     {
         return _context.Pacientes.ToList();

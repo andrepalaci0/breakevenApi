@@ -2,6 +2,7 @@
 using breakevenApi.Domain.Services;
 using breakevenApi.Domain.Services.DTOs.Consulta;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace breakevenApi.Controllers
 {
@@ -92,6 +93,23 @@ namespace breakevenApi.Controllers
                 return NotFound();
             }
             return Ok(consulta);
+        }
+
+        [HttpPut]
+        [Route("/agenda-consulta")]
+        public IActionResult CreateConsulta([FromBody] CreateConsultaDTO createConsultaDTO)
+        {
+            if (createConsultaDTO.NomeMedicoPreferencia.IsNullOrEmpty())
+            {
+                var possibleMedics = _consultaService.GetMedicsByEspecialidade(createConsultaDTO.Especialidade);
+                return BadRequest("É necessário definir o médico que realizará a consulta. Escolha os médicos disponíveis na lista: " + possibleMedics);
+            }
+
+            if (!_consultaService.PrimeiroCadastroPaciente(createConsultaDTO)) return BadRequest("Erro ao cadastrar paciente");
+      
+            if (!_consultaService.CreateConsulta(createConsultaDTO)) return BadRequest("Erro ao criar consulta");
+
+            return Ok();
         }
 
         [HttpPatch]

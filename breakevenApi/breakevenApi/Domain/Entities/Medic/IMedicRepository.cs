@@ -9,6 +9,7 @@ namespace breakevenApi.Domain.Entities.Medic
         Medic? GetByCrm(long crm);
         Medic? GetByName(string name);
         List<Medic>? GetAll();
+        List<Medic>? GetByEspecialidade(string nomeEspecialidade);
         void Update(Medic medic);
         void Delete(long crm);
     }

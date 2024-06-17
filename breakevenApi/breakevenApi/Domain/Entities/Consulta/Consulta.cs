@@ -10,10 +10,10 @@ namespace breakevenApi.Domain.Entities.Consulta
     [PrimaryKey(nameof(IdEspecialidade), nameof(IdPaciente), nameof(IdMedico), nameof(Data))]
     public class Consulta
     {
-        public long IdEspecialidade { get; private set; }
-        public long IdPaciente { get; private set; }
-        public long IdMedico { get; private set; }
-        public DateOnly Data { get; private set; }
+        public long IdEspecialidade { get;  set; }
+        public long IdPaciente { get;  set; }
+        public long IdMedico { get; set; }
+        public DateOnly Data { get; set; }
 
         public long IdDiagnostico { get; set; }
 
@@ -30,7 +30,9 @@ namespace breakevenApi.Domain.Entities.Consulta
         public float? ValorPagamento { get; set; }
 
         // Constructor to initialize properties
-        public Consulta(long idEspecialidade, long idPaciente, long idMedico, DateOnly data, DateTime horaInicioConsulta, DateTime horaFimConsulta, bool paga, MetodosPagamento formaPagamento, float valorPagamento)
+
+        public Consulta() { }
+        public Consulta(long idEspecialidade, long idPaciente, long idMedico, DateOnly data, DateTime horaInicioConsulta, DateTime horaFimConsulta, bool paga, MetodosPagamento? formaPagamento, float? valorPagamento)
         {
             IdEspecialidade = idEspecialidade;
             IdPaciente = idPaciente;

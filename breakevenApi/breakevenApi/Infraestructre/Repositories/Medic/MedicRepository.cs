@@ -32,6 +32,23 @@ public class MedicRepository : IMedicRepository
         return _context.Medics.ToList();
     }
 
+
+    public List<Medic>? GetByEspecialidade(string nomeEspecialidade)
+    {
+        var especialidade = _context.Especialidades.FirstOrDefault(e => e.NomeEspecialidade == nomeEspecialidade);
+        List<Medic>? medicos = new List<Medic>(); 
+        
+        var exerceEsp = _context.ExerceEsp.Where(e => e.IdEsp == especialidade.Codigo).ToList();
+
+        foreach (var e in exerceEsp) {
+
+            var medic = _context.Medics.FirstOrDefault(m => m.Crm == e.IdMedico);
+
+            if(medic != null) medicos.Add(medic);
+        }
+        return medicos;
+    }
+
     public void Update(Medic medic)
     {
         _context.Medics.Update(medic);

@@ -3,80 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\entities\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\entities\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\infraestructre\\databasemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\infraestructre\\databasemanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\infraestructre\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\infraestructre\\migrations\\datacontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\infraestructre\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\infraestructre\\datacontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B033442A-0121-44E3-981D-26652DE89F47}|tests\\breakevenApi.tests.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\tests\\consultaservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B033442A-0121-44E3-981D-26652DE89F47}|tests\\breakevenApi.tests.csproj|solutionrelative:tests\\consultaservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B033442A-0121-44E3-981D-26652DE89F47}|tests\\breakevenApi.tests.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\tests\\agendaservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B033442A-0121-44E3-981D-26652DE89F47}|tests\\breakevenApi.tests.csproj|solutionrelative:tests\\agendaservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\services\\dtos\\consulta\\relatoriocronogramaconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\services\\dtos\\consulta\\relatoriocronogramaconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\services\\consultaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\services\\consultaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\services\\dtos\\consulta\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\services\\dtos\\consulta\\horario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\entities\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\entities\\consulta\\consulta.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\services\\dtos\\consulta\\createconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\services\\dtos\\consulta\\createconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\services\\agendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\services\\agendaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\infraestructre\\repositories\\consulta\\consultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\infraestructre\\repositories\\consulta\\consultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\entities\\consulta\\iconsultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\entities\\consulta\\iconsultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\services\\dtos\\consulta\\finishesconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\services\\dtos\\consulta\\finishesconsultadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\entities\\agenda\\agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\entities\\agenda\\agenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\infraestructre\\repositories\\paciente\\pacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\infraestructre\\repositories\\paciente\\pacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\infraestructre\\repositories\\historico\\historicopacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\infraestructre\\repositories\\historico\\historicopacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\entities\\paciente\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\entities\\paciente\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\entities\\historico\\historicopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\entities\\historico\\historicopaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\infraestructre\\repositories\\medic\\medicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\infraestructre\\repositories\\medic\\medicrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|c:\\users\\andre.tivo\\source\\repos\\ep_bd2\\breakevenapi\\breakevenapi\\domain\\entities\\paciente\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{59B7F3FC-006E-48F3-9A7B-8EC4453337DF}|breakevenApi\\breakevenApi.csproj|solutionrelative:breakevenapi\\domain\\entities\\paciente\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,236 +42,113 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DataContextModelSnapshot.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Infraestructre\\Migrations\\DataContextModelSnapshot.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Migrations\\DataContextModelSnapshot.cs",
-              "RelativeToolTip": "breakevenApi\\Infraestructre\\Migrations\\DataContextModelSnapshot.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T21:03:55.609Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DatabaseManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\DatabaseManagementService.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Infraestructre\\DatabaseManagementService.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\DatabaseManagementService.cs",
-              "RelativeToolTip": "breakevenApi\\Infraestructre\\DatabaseManagementService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T21:03:31.238Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DataContext.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\DataContext.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Infraestructre\\DataContext.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\DataContext.cs",
-              "RelativeToolTip": "breakevenApi\\Infraestructre\\DataContext.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T21:03:22.954Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Program.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Program.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Program.cs",
-              "RelativeToolTip": "breakevenApi\\Program.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACEAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T20:47:13.257Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "ConsultaService.cs",
               "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\ConsultaService.cs",
               "RelativeDocumentMoniker": "breakevenApi\\Domain\\Services\\ConsultaService.cs",
               "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\ConsultaService.cs",
               "RelativeToolTip": "breakevenApi\\Domain\\Services\\ConsultaService.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAvwC0AAAAcAAAA",
+              "ViewState": "AQIAAOMAAAAAAAAAAAAcwO4AAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T18:07:49.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ConsultaServiceTest.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\tests\\ConsultaServiceTest.cs",
-              "RelativeDocumentMoniker": "tests\\ConsultaServiceTest.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\tests\\ConsultaServiceTest.cs",
-              "RelativeToolTip": "tests\\ConsultaServiceTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T01:03:19.863Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Consulta.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
-              "RelativeToolTip": "breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAADwvycAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T18:50:36.308Z",
+              "WhenOpened": "2024-06-12T18:07:49.677Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Horario.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\Horario.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\Horario.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\Horario.cs",
-              "RelativeToolTip": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\Horario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T18:53:54.532Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "AgendaService.cs",
               "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\AgendaService.cs",
               "RelativeDocumentMoniker": "breakevenApi\\Domain\\Services\\AgendaService.cs",
               "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\AgendaService.cs",
               "RelativeToolTip": "breakevenApi\\Domain\\Services\\AgendaService.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAAgwE0AAAAlAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAgwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T00:36:22.671Z"
+              "WhenOpened": "2024-06-17T12:26:20.487Z",
+              "IsPinned": true,
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RelatorioCronogramaConsultaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\RelatorioCronogramaConsultaDTO.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\RelatorioCronogramaConsultaDTO.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\RelatorioCronogramaConsultaDTO.cs",
-              "RelativeToolTip": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\RelatorioCronogramaConsultaDTO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T18:51:35.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AgendaServiceTest.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\tests\\AgendaServiceTest.cs",
-              "RelativeDocumentMoniker": "tests\\AgendaServiceTest.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\tests\\AgendaServiceTest.cs",
-              "RelativeToolTip": "tests\\AgendaServiceTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T00:36:17.444Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Agenda.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Agenda\\Agenda.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Entities\\Agenda\\Agenda.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Agenda\\Agenda.cs",
-              "RelativeToolTip": "breakevenApi\\Domain\\Entities\\Agenda\\Agenda.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAmwBEAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T00:56:46.31Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IConsultaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Consulta\\IConsultaRepository.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Entities\\Consulta\\IConsultaRepository.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Consulta\\IConsultaRepository.cs",
-              "RelativeToolTip": "breakevenApi\\Domain\\Entities\\Consulta\\IConsultaRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-14T17:22:15.126Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FinishesConsultaDTO.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\FinishesConsultaDTO.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\FinishesConsultaDTO.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\FinishesConsultaDTO.cs",
-              "RelativeToolTip": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\FinishesConsultaDTO.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAUwBkAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-12T18:30:46.787Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ConsultaRepository.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Consulta\\ConsultaRepository.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Infraestructre\\Repositories\\Consulta\\ConsultaRepository.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Consulta\\ConsultaRepository.cs",
-              "RelativeToolTip": "breakevenApi\\Infraestructre\\Repositories\\Consulta\\ConsultaRepository.cs",
-              "ViewState": "AQIAABkAAAAAAAAAAIAywCQAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T14:42:45.018Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 4,
               "Title": "ConsultaController.cs",
               "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Controllers\\ConsultaController.cs",
               "RelativeDocumentMoniker": "breakevenApi\\Controllers\\ConsultaController.cs",
               "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Controllers\\ConsultaController.cs",
               "RelativeToolTip": "breakevenApi\\Controllers\\ConsultaController.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAAAGYAAAAMAAAA",
+              "ViewState": "AQIAAFoAAAAAAAAAAAAvwG0AAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T18:38:06.463Z"
+              "WhenOpened": "2024-06-17T13:21:02.614Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "HistoricoPaciente.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Historico\\HistoricoPaciente.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Entities\\Historico\\HistoricoPaciente.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Historico\\HistoricoPaciente.cs",
-              "RelativeToolTip": "breakevenApi\\Domain\\Entities\\Historico\\HistoricoPaciente.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAApwBgAAAAcAAAA",
+              "DocumentIndex": 5,
+              "Title": "PacienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Paciente\\PacienteRepository.cs",
+              "RelativeDocumentMoniker": "breakevenApi\\Infraestructre\\Repositories\\Paciente\\PacienteRepository.cs",
+              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Paciente\\PacienteRepository.cs",
+              "RelativeToolTip": "breakevenApi\\Infraestructre\\Repositories\\Paciente\\PacienteRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwA4AAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T13:40:40.531Z"
+              "WhenOpened": "2024-06-17T12:30:05.258Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "HistoricoPacienteRepository.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Historico\\HistoricoPacienteRepository.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Infraestructre\\Repositories\\Historico\\HistoricoPacienteRepository.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Historico\\HistoricoPacienteRepository.cs",
-              "RelativeToolTip": "breakevenApi\\Infraestructre\\Repositories\\Historico\\HistoricoPacienteRepository.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwC0AAAB+AAAA",
+              "DocumentIndex": 6,
+              "Title": "IPacienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Paciente\\IPacienteRepository.cs",
+              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Entities\\Paciente\\IPacienteRepository.cs",
+              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Paciente\\IPacienteRepository.cs",
+              "RelativeToolTip": "breakevenApi\\Domain\\Entities\\Paciente\\IPacienteRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T13:38:42.596Z"
+              "WhenOpened": "2024-06-17T12:29:57.921Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "MedicRepository.cs",
-              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Medic\\MedicRepository.cs",
-              "RelativeDocumentMoniker": "breakevenApi\\Infraestructre\\Repositories\\Medic\\MedicRepository.cs",
-              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Infraestructre\\Repositories\\Medic\\MedicRepository.cs",
-              "RelativeToolTip": "breakevenApi\\Infraestructre\\Repositories\\Medic\\MedicRepository.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAADwvxIAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "CreateConsultaDTO.cs",
+              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\CreateConsultaDTO.cs",
+              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\CreateConsultaDTO.cs",
+              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Services\\DTOs\\Consulta\\CreateConsultaDTO.cs",
+              "RelativeToolTip": "breakevenApi\\Domain\\Services\\DTOs\\Consulta\\CreateConsultaDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-13T12:33:36.964Z"
+              "WhenOpened": "2024-06-17T12:18:24.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Consulta.cs",
+              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
+              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
+              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
+              "RelativeToolTip": "breakevenApi\\Domain\\Entities\\Consulta\\Consulta.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAA/wCIAAADHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T15:00:28.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Paciente\\Paciente.cs",
+              "RelativeDocumentMoniker": "breakevenApi\\Domain\\Entities\\Paciente\\Paciente.cs",
+              "ToolTip": "C:\\Users\\andre.tivo\\source\\repos\\EP_BD2\\breakevenApi\\breakevenApi\\Domain\\Entities\\Paciente\\Paciente.cs",
+              "RelativeToolTip": "breakevenApi\\Domain\\Entities\\Paciente\\Paciente.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAkwC8AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T12:17:01.585Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,13 +1,13 @@
 ﻿namespace breakevenApi.Domain.Services.DTOs.Consulta
 {
-    public class Horario
+    public class HorarioDTO
     {
         public DateTime HoraInicio { get; set; }
         public DateTime HoraFim { get; set; }
 
         public bool Livre { get; set; }
 
-        public Horario(DateTime inicio, DateTime fim, bool livre)
+        public HorarioDTO(DateTime inicio, DateTime fim, bool livre)
         {
             HoraInicio = inicio;
             HoraFim = fim;

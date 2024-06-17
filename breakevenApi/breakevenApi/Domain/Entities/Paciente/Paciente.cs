@@ -23,14 +23,11 @@ namespace breakevenApi.Domain.Entities.Paciente
         [MaxLength(15)]
         public string Telefone { get; private set; }
 
-        [Required]
         public Sexo Sexo { get; private set; }
 
-        [Required]
         [MaxLength(200)]
         public string Endereco { get; private set; }
 
-        [Required]
         public int Idade { get; private set; }
 
         // Constructor to initialize properties
@@ -44,5 +41,11 @@ namespace breakevenApi.Domain.Entities.Paciente
             Endereco = endereco;
             Idade = idade;
         }
+
+        public Paciente(string nomePaciente, string telefonePaciente, string cpfPaciente) { 
+            NomePaciente = nomePaciente;
+            Telefone = telefonePaciente;
+            Cpf = cpfPaciente;
+        }   
     }
 }
