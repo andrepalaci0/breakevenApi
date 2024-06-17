@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("breakevenApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+44cf264f8e08e5969cb8360f88232ed948414a18")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d53cb1d2f0cffd683cebda94e9cabe46f6a01de6")]
 [assembly: System.Reflection.AssemblyProductAttribute("breakevenApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("breakevenApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
