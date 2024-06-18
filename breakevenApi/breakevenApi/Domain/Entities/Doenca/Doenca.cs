@@ -18,5 +18,10 @@ namespace breakevenApi.Domain.Entities.Doenca
             Id = id;
             Nome = nome;
         }
+
+        public Doenca(string nome)
+        {
+            Nome = nome;
+        }
     }
 }

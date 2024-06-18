@@ -1,4 +1,9 @@
-.vs
-/bin
-/obj
-/Debug
+# Ignore Visual Studio related files and folders
+.vs/
+
+# Ignore build output directories
+/bin/
+/obj/
+
+# Ignore Debug configuration folders
+/Debug/
