@@ -15,12 +15,12 @@ namespace breakevenApi.Controllers
 
 
         [HttpGet]
-        [Route("/get/{id}")]
-        public IActionResult GetDoencaById(long id)
+        [Route("/get/{idDoenca}")]
+        public IActionResult GetDoencaById(long idDoenca)
         {
             try
             {
-                return Ok(_doencaRepository.GetById(id));
+                return Ok(_doencaRepository.GetById(idDoenca));
             
             }
             catch(Exception e)
