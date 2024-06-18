@@ -16,5 +16,17 @@
         public DateTime HoraFim { get; set; }
         public string? NomeMedicoPreferencia { get; set; }
 
+        public CreateConsultaDTO(string nomePaciente, string telefonePaciente, string cpfPaciente, long codigoEspecialidade, DateOnly dataConsulta, DateTime horaInicio, DateTime horaFim, string? nomeMedicoPreferencia)
+        {
+            NomePaciente = nomePaciente;
+            TelefonePaciente = telefonePaciente;
+            CPFPaciente = cpfPaciente;
+            CodigoEspecialidade = codigoEspecialidade;
+            DataConsulta = dataConsulta;
+            HoraInicio = horaInicio;
+            HoraFim = horaFim;
+            NomeMedicoPreferencia = nomeMedicoPreferencia;
+        }
+
     }
 }

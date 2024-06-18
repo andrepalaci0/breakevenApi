@@ -134,7 +134,7 @@ namespace breakevenApi.Domain.Services
                 return false;
             }
             paciente.Endereco = finishesCadastroPacienteDTO.Endereco;
-            paciente.DataNascimento = finishesCadastroPacienteDTO.DataNascimento;
+            paciente.DataNascimento = finishesCadastroPacienteDTO.DataNascimento; 
             paciente.Sexo = (Sexo)Enum.Parse(typeof(Sexo), finishesCadastroPacienteDTO.Sexo);
             try
             {
