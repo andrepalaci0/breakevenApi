@@ -1,41 +1,49 @@
+Here is the improved version of the document:
 
+---
 
-BreakevenApi
-================
+# BreakevenApi
 
 BreakevenApi is a medical scheduling and record-keeping application.
 
-Developed for the breakeven process of the 2024 internship program at Stone Co with the aim of improving the author's knowledge in C#, Dotnet Core, Entity Framework, and Unit Testing.
+Developed for the breakeven process of the 2024 internship program at Stone Co, aiming to improve the author's knowledge in C#, Dotnet Core, Entity Framework, Docker, and Unit Testing.
 
 Some tests still need to be implemented, and modifications are likely.
 
+## Running the Application
 
+To run BreakevenApi, Docker is mandatory. 
 
-### Features
+Simply type:
+```sh
+docker-compose up -d
+```
+(`-d` is optional for detached mode)
 
-* Manage medical consultations, including creating, finishing, and scheduling appointments
-* Create and manage patient records
-* Generate reports
-* Manage medical schedules for doctors
+The Docker engine will create a bundle with 3 images:
+* `sqldata-1`: The SQL Server instance used by the API.
+* `service-migrations`: Instance responsible for running the database migrations (may be deprecated, needs further investigation).
+* `breakevenapi`: The application instance itself, responsible for handling API requests.
 
-### Services
+## Features
 
-* `ConsultaService`: manages medical consultations, patient records and reports.
-* `AgendaService`: manages medical schedules for reports.
+* Manage medical consultations, including creating, finishing, and scheduling appointments.
+* Create and manage patient records.
+* Generate reports.
+* Manage medical schedules for doctors.
 
-### Endpoints
+## Services
 
-All enndpoints are listed in the swagger documentation, which can be accessed at `http://localhost:8080/swagger-ui.html`.
-Those are the most important ones:
+* `ConsultaService`: Manages medical consultations, patient records, and reports.
+* `AgendaService`: Manages medical schedules for reports.
 
-* `/paciente/adds-missing-data`: should be used before the consultation starts and the pacient is a new one, therefore needing to add some missing data
-* `/consulta/cronograma`: retrieves a list of all appointments today, with information about all the medis, patients and the time of the appointment
-* `/consulta/finaliza`: finishes a consultation and register all the information for the report
-* `/consulta/horariolivre/`: gets a list of all the free time slots for a doctor, by CRM and Date
-* `/consulta/agenda-consulta/`: schedules a new appointment, checking all the necessary conditions
-* 
+## Endpoints
 
+All endpoints are listed in the Swagger documentation, which can be accessed at `https://localhost:64603/swagger/index.html`. Here are the most important ones:
 
-
-
+* `/paciente/adds-missing-data`: Used before the consultation starts if the patient is new and missing some data.
+* `/consulta/cronograma`: Retrieves a list of all appointments today, with information about all the doctors, patients, and the appointment times.
+* `/consulta/finaliza`: Finishes a consultation and registers all the information for the report.
+* `/consulta/horariolivre/`: Gets a list of all free time slots for a doctor, by CRM and date.
+* `/consulta/agenda-consulta/`: Schedules a new appointment, checking all necessary conditions.
 
