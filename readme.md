@@ -1,4 +1,4 @@
-Here is the improved version of the document:
+
 
 ---
 
