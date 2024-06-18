@@ -26,6 +26,7 @@ namespace breakevenApi.Controllers
         }
 
         [HttpPut]
+        [Route("/adds-missing-data/")]
         public IActionResult FinishesCadastroPaciente([FromBody] FinishesCadastroPacienteDTO pacienteDTO)
         {
             try
