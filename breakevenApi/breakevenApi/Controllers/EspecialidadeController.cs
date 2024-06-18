@@ -31,7 +31,7 @@ namespace breakevenApi.Controllers
                 return Ok();
             }catch(Exception e)
             {
-                return BadRequest();
+                return BadRequest(e.Message);
             }
         }
     }

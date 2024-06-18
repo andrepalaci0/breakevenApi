@@ -106,7 +106,7 @@ namespace breakevenApi.Domain.Services
             return true;
         }
 
-        public bool FirstRegisterPaciente(CreateConsultaDTO createConsultaDTO)
+        public bool InitialCadastroPaciente(CreateConsultaDTO createConsultaDTO)
         {
             var paciente = _pacienteRepository.GetByCpf(createConsultaDTO.CPFPaciente);
             if(paciente == null)
@@ -124,6 +124,31 @@ namespace breakevenApi.Domain.Services
             }
             return true;
         }
+
+        public bool FinishesCadastroPaciente(FinishesCadastroPacienteDTO finishesCadastroPacienteDTO)
+        {
+            var paciente = _pacienteRepository.GetByCpf(finishesCadastroPacienteDTO.CPFPaciente);
+            if (paciente == null)
+            {
+                _logger.LogError("Paciente não encontrado");
+                return false;
+            }
+            paciente.Endereco = finishesCadastroPacienteDTO.Endereco;
+            paciente.DataNascimento = finishesCadastroPacienteDTO.DataNascimento;
+            paciente.Sexo = (Sexo)Enum.Parse(typeof(Sexo), finishesCadastroPacienteDTO.Sexo);
+            try
+            {
+                _pacienteRepository.Update(paciente);
+                return true;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return false;
+            }
+        }
+
+
         //accept both string (especialidade name) and ID
         public List<Medic>? GetMedicsByEspecialidade(string especialidade)
         {
@@ -182,29 +207,6 @@ namespace breakevenApi.Domain.Services
             return horarios;
         }
 
-
-        public bool FinishesCadastroPaciente(FinishesCadastroPacienteDTO finishesCadastroPacienteDTO)
-        {
-            var paciente = _pacienteRepository.GetByCpf(finishesCadastroPacienteDTO.CPFPaciente);
-            if (paciente == null)
-            {
-                _logger.LogError("Paciente não encontrado");
-                return false;
-            }
-            paciente.Endereco = finishesCadastroPacienteDTO.Endereco;
-            paciente.DataNascimento = finishesCadastroPacienteDTO.DataNascimento;
-            paciente.Sexo = (Sexo)Enum.Parse(typeof(Sexo), finishesCadastroPacienteDTO.Sexo);
-            try
-            {
-                _pacienteRepository.Update(paciente);
-                return true;
-            }
-            catch (Exception e)
-            {
-                _logger.LogError(e.Message);
-                return false;
-            }
-        }
 
         public bool AddHistorico(Consulta consulta)
         {
