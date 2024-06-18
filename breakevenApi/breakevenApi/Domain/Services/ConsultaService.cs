@@ -7,6 +7,7 @@ using breakevenApi.Domain.Entities.ExerceEsp;
 using breakevenApi.Domain.Entities.Historico;
 using breakevenApi.Domain.Entities.Medic;
 using breakevenApi.Domain.Entities.Paciente;
+using breakevenApi.Domain.Services.DTOs.Paciente;
 using breakevenApi.Domain.Services.DTOs.Consulta;
 using Microsoft.IdentityModel.Tokens;
 using System.Data;
@@ -105,7 +106,7 @@ namespace breakevenApi.Domain.Services
             return true;
         }
 
-        public bool PrimeiroCadastroPaciente(CreateConsultaDTO createConsultaDTO)
+        public bool FirstRegisterPaciente(CreateConsultaDTO createConsultaDTO)
         {
             var paciente = _pacienteRepository.GetByCpf(createConsultaDTO.CPFPaciente);
             if(paciente == null)
@@ -123,7 +124,7 @@ namespace breakevenApi.Domain.Services
             }
             return true;
         }
-
+        //accept both string (especialidade name) and ID
         public List<Medic>? GetMedicsByEspecialidade(string especialidade)
         {
             return _medicoRepository.GetByEspecialidade(especialidade);
@@ -179,6 +180,30 @@ namespace breakevenApi.Domain.Services
                 }
             }
             return horarios;
+        }
+
+
+        public bool FinishesCadastroPaciente(FinishesCadastroPacienteDTO finishesCadastroPacienteDTO)
+        {
+            var paciente = _pacienteRepository.GetByCpf(finishesCadastroPacienteDTO.CPFPaciente);
+            if (paciente == null)
+            {
+                _logger.LogError("Paciente não encontrado");
+                return false;
+            }
+            paciente.Endereco = finishesCadastroPacienteDTO.Endereco;
+            paciente.DataNascimento = finishesCadastroPacienteDTO.DataNascimento;
+            paciente.Sexo = (Sexo)Enum.Parse(typeof(Sexo), finishesCadastroPacienteDTO.Sexo);
+            try
+            {
+                _pacienteRepository.Update(paciente);
+                return true;
+            }
+            catch (Exception e)
+            {
+                _logger.LogError(e.Message);
+                return false;
+            }
         }
 
         public bool AddHistorico(Consulta consulta)

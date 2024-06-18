@@ -8,30 +8,31 @@ namespace breakevenApi.Domain.Entities.Paciente
     public class Paciente
     {
         [Key]
-        [Required]
-        public long CodigoPaciente { get; private set; }
+        public long CodigoPaciente { get; set; }
 
         [Required]
         [MaxLength(11)]
-        public string Cpf { get; private set; }
+        public string Cpf { get; set; }
 
         [Required]
         [MaxLength(100)]
-        public string NomePaciente { get; private set; }
+        public string NomePaciente { get; set; }
 
         [Required]
         [MaxLength(15)]
-        public string Telefone { get; private set; }
+        public string Telefone { get;   set; }
 
-        public Sexo Sexo { get; private set; }
+        public Sexo Sexo { get; set; }
 
         [MaxLength(200)]
-        public string Endereco { get; private set; }
+        public string Endereco { get; set; }
 
-        public int Idade { get; private set; }
+        public DateTime DataNascimento { get;  set; }
+
+        public int Idade { get; set; }
 
         // Constructor to initialize properties
-        public Paciente(long codigoPaciente, string cpf, string nomePaciente, string telefone, Sexo sexo, string endereco, int idade)
+        public Paciente(long codigoPaciente, string cpf, string nomePaciente, string telefone, Sexo sexo, string endereco, DateTime dataNascimento)
         {
             CodigoPaciente = codigoPaciente;
             Cpf = cpf;
@@ -39,7 +40,17 @@ namespace breakevenApi.Domain.Entities.Paciente
             Telefone = telefone;
             Sexo = sexo;
             Endereco = endereco;
-            Idade = idade;
+            DataNascimento = dataNascimento;
+        }
+
+        public Paciente(string cpf, string nomePaciente, string telefone, Sexo sexo, string endereco, DateTime datanascimento)
+        {
+            Cpf = cpf;
+            NomePaciente = nomePaciente;
+            Telefone = telefone;
+            Sexo = sexo;
+            Endereco = endereco;
+            DataNascimento = datanascimento;
         }
 
         public Paciente(string nomePaciente, string telefonePaciente, string cpfPaciente) { 
@@ -47,5 +58,15 @@ namespace breakevenApi.Domain.Entities.Paciente
             Telefone = telefonePaciente;
             Cpf = cpfPaciente;
         }   
+
+        private int GetIdade()
+        {
+            DateTime today = DateTime.Today;
+            Idade = today.Year - DataNascimento.Year;
+
+            if (DataNascimento.Date > today.AddYears(-Idade)) Idade--;
+
+            return Idade;
+        }
     }
 }

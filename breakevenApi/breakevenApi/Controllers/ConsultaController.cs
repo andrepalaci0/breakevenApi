@@ -105,7 +105,7 @@ namespace breakevenApi.Controllers
                 return BadRequest("É necessário definir o médico que realizará a consulta. Escolha os médicos disponíveis na lista: " + possibleMedics);
             }
 
-            if (!_consultaService.PrimeiroCadastroPaciente(createConsultaDTO)) return BadRequest("Erro ao cadastrar paciente");
+            if (!_consultaService.FirstRegisterPaciente(createConsultaDTO)) return BadRequest("Erro ao cadastrar paciente");
       
             if (!_consultaService.CreateConsulta(createConsultaDTO)) return BadRequest("Erro ao criar consulta");
 
